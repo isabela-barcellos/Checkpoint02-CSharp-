@@ -1,10 +1,10 @@
-1. Conceitos fundamentais
+#1. Conceitos fundamentais
 
-Explique, com suas próprias palavras, os quatro princípios básicos da Orientação a Objetos: **encapsulamento**, **herança**, **polimorfismo** e **abstração**. Para cada princípio, cite um exemplo simples em C# que ilustre seu uso. (Referência aos princípios.)
+Explique, com suas prÃ³prias palavras, os quatro princÃ­pios bÃ¡sicos da OrientaÃ§Ã£o a Objetos:Â **encapsulamento**,Â **heranÃ§a**,Â **polimorfismo**Â eÂ **abstraÃ§Ã£o**. Para cada princÃ­pio, cite um exemplo simples em C# que ilustre seu uso. (ReferÃªncia aos princÃ­pios.)
 
-Encapsulamento: 
+##Encapsulamento: 
 
-Usamos o encapsulamento para isolar problemas, como o famoso “na minha máquina roda”. Ele é utilizado para deixar o acesso aos dados de uma classe através de métodos, nele esconder detalhes e expor somente o que será usado. Ou seja, ele traz um controle de acesso 
+Usamos o encapsulamento para isolar problemas, como o famoso â€œna minha mÃ¡quina rodaâ€. Ele Ã© utilizado para deixar o acesso aos dados de uma classe atravÃ©s de mÃ©todos, nele esconder detalhes e expor somente o que serÃ¡ usado. Ou seja, ele traz um controle de acesso 
 
 ```csharp
 public class Funcionario
@@ -28,9 +28,9 @@ public class Funcionario
 }
 ```
 
-Herança 
+##HeranÃ§a 
 
-Na herança é onde a classe filho que é estendida de outra que será o pai, irá herdar as propriedades e métodos da classe pai. Isso faz com que não precise criar tudo de novo em outra classe, reutilizando o código. 
+Na heranÃ§a Ã© onde a classe filho que Ã© estendida de outra que serÃ¡ o pai, irÃ¡ herdar as propriedades e mÃ©todos da classe pai. Isso faz com que nÃ£o precise criar tudo de novo em outra classe, reutilizando o cÃ³digo. 
 
 ```csharp
 public class Animal{
@@ -50,9 +50,9 @@ porco Come();
 porco Anda();
 ```
 
-Polimorfismo
+##Polimorfismo
 
-Um método pode ser diferente em cada chamada, como na sobrecarga e sobrescrita dos métodos. Na sobrecarga o método continua com o mesmo nome e carrega parâmetros diferentes e na Sobrescrita terá a substituição de um método na classe que será derivada. 
+Um mÃ©todo pode ser diferente em cada chamada, como na sobrecarga e sobrescrita dos mÃ©todos. Na sobrecarga o mÃ©todo continua com o mesmo nome e carrega parÃ¢metros diferentes e na Sobrescrita terÃ¡ a substituiÃ§Ã£o de um mÃ©todo na classe que serÃ¡ derivada. 
 
 ```csharp
 
@@ -94,15 +94,15 @@ public class Program
         porco.Come();
         porco.Anda();
 
-        porco.Anda("com as patas sujas (quando está brincando)");
+        porco.Anda("com as patas sujas (quando estÃ¡ brincando)");
     }
 }
 
 ```
 
-Abstração
+##AbstraÃ§Ã£o
 
-Vai trazer apenas a funcionalidade importante, tirando a complexidade do código e trazendo apenas a abstração do que importa
+Vai trazer apenas a funcionalidade importante, tirando a complexidade do cÃ³digo e trazendo apenas a abstraÃ§Ã£o do que importa
 
 ```csharp
 public abstract class Animal
@@ -111,7 +111,7 @@ public abstract class Animal
 
     public void Dormir()
     {
-        Console.WriteLine("O animal está dormindo...");
+        Console.WriteLine("O animal estÃ¡ dormindo...");
     }
 }
 
@@ -130,17 +130,17 @@ public class Program
         Animal cachorro = new Cachorro();
 
         cachorro.FazerSom(); 
-        cachorro.Dormir();   // Método comum a todos os animais
+        cachorro.Dormir();   // MÃ©todo comum a todos os animais
     }
 }
 
 ```
 
-2. Classe vs. objeto
+#2. Classe vs. objeto
 
-Descreva a diferença entre **classe** e **objeto** em C#. Em seguida, escreva um pequeno trecho de código que declara uma classe simples e cria uma instância (objeto) dessa classe.
+Descreva a diferenÃ§a entreÂ **classe**Â eÂ **objeto**Â em C#. Em seguida, escreva um pequeno trecho de cÃ³digo que declara uma classe simples e cria uma instÃ¢ncia (objeto) dessa classe.
 
-A classe será o molde que o objeto irá seguir. Logo temos a classe como uma planta ou estrutura do que teremos e o Objeto o resultado dessa estrutura com os valores atribuídos. 
+A classe serÃ¡ o molde que o objeto irÃ¡ seguir. Logo temos a classe como uma planta ou estrutura do que teremos e o Objeto o resultado dessa estrutura com os valores atribuÃ­dos. 
 
 ```csharp
 public class Paciente
@@ -155,31 +155,31 @@ public class Paciente
 }
 
 Paciente paciente1 = new Paciente();
-paciente1.Nome = "João Pedro";
+paciente1.Nome = "JoÃ£o Pedro";
 paciente1.Idade = 1
 paciente1.Saudacoes();
 
 ```
 
-3. Modificadores de acesso A apresentacao de slide menciona diferentes modificadores de acesso em C#: public, private e protected. Explique o significado de cada um e discuta em que situações eles devem ser utilizados ao projetar classes.
+#3. Modificadores de acessoÂ A apresentacao de slide menciona diferentes modificadores de acesso em C#:Â public,Â privateÂ eÂ protected. Explique o significado de cada um e discuta em que situaÃ§Ãµes eles devem ser utilizados ao projetar classes.
 
-public: fica publico para qualquer parte do código 
+**public**: fica publico para qualquer parte do cÃ³digo 
 
-private: Ele é privado, então só pode ser acessado dentro da própria classe.
+**private**: Ele Ã© privado, entÃ£o sÃ³ pode ser acessado dentro da prÃ³pria classe.
 
-protected: Ele será protegido, então ele é acessado dentro da própria classe e suas subclasse. 
+**protected**: Ele serÃ¡ protegido, entÃ£o ele Ã© acessado dentro da prÃ³pria classe e suas subclasse. 
 
-O pubic pode ser utilizado em casos o dado não é sensível. 
+O pubic pode ser utilizado em casos o dado nÃ£o Ã© sensÃ­vel. 
 
-O private pode ser utilizado em casos onde o dado é sensível e só precisa ser utilizado dentro daquela classe, como por exemplo uma taxa para calcular o salário. 
+O private pode ser utilizado em casos onde o dado Ã© sensÃ­vel e sÃ³ precisa ser utilizado dentro daquela classe, como por exemplo uma taxa para calcular o salÃ¡rio. 
 
-O protected será usado quando precisamos daquele dados em uma herança que vai passar para as subclasses, mas não queremos que ele fique aberto para todo o restante do código. 
+O protected serÃ¡ usado quando precisamos daquele dados em uma heranÃ§a que vai passar para as subclasses, mas nÃ£o queremos que ele fique aberto para todo o restante do cÃ³digo. 
 
-4. Sobrecarga e sobrescrita
+#4. Sobrecarga e sobrescrita
 
-Defina **sobrecarga** (overloading) e **sobrescrita** (overriding) de métodos em C#. Explplique as diferenças entre esses dois mecanismos de polimorfismo e forneça um exemplo de código para cada caso.
+DefinaÂ **sobrecarga**Â (overloading) eÂ **sobrescrita**Â (overriding) de mÃ©todos em C#. Explplique as diferenÃ§as entre esses dois mecanismos de polimorfismo e forneÃ§a um exemplo de cÃ³digo para cada caso.
 
-Na sobrecarga o método continua com o mesmo nome e carrega parâmetros diferentes e na Sobrescrita terá a substituição de um método na classe que será derivada. 
+Na sobrecarga o mÃ©todo continua com o mesmo nome e carrega parÃ¢metros diferentes e na Sobrescrita terÃ¡ a substituiÃ§Ã£o de um mÃ©todo na classe que serÃ¡ derivada. 
 
 ```csharp
 
@@ -221,7 +221,7 @@ public class Program
         porco.Come();
         porco.Anda();
 
-        porco.Anda("com as patas sujas (quando está brincando)");
+        porco.Anda("com as patas sujas (quando estÃ¡ brincando)");
     }
 }
 
